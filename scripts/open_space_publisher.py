@@ -3,7 +3,7 @@
 import rospy
 from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Float32
-from msg import OpenSpace
+from ros_exercises.msg import OpenSpace
 import math
 
 
@@ -32,7 +32,6 @@ def open_space_publisher():
     rospy.init_node('open_space_publisher', anonymous=True)
 
     rospy.Subscriber('fake_scan', LaserScan, callback)
-
     rospy.spin()
     
 if __name__ == '__main__':
